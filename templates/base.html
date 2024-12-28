@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}Kupas News{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'imgs/theme/favicon.png' %}">
+    <!-- NewsBoard CSS  -->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/widgets.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+
+<body>
+    <div class="scroll-progress bg-dark"></div>
+    <!-- Start Preloader -->
+    <div class="preloader font-heading">
+        <div class="counter">0</div>
+    </div> 
+    <!--Offcanvas sidebar-->
+    {% include 'components/aside.html' %}
+    <!-- Start Header -->
+    {% include 'components/lite_navbar.html' %}
+    <!-- Start Header -->
+    {% include 'components/navbar.html' %}
+    <!--Start search form-->
+    {% include 'components/search_form.html' %}
+    <!-- Start Main content -->
+    <main class="mt-30">
+        <div class="container">
+         {% block content %}
+         {% endblock %}
+        </div>
+    </main>
+    <!-- End Main content -->
+    <!-- Footer Start-->
+    {% include 'components/footer.html' %}
+    <!-- End Footer -->
+    <div class="dark-mark"></div>
+    <!-- Vendor JS-->
+    <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/vendor/popper.min.js' %}"></script>
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/vendor/slick.min.js' %}"></script>
+    <script src="{% static 'js/vendor/wow.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.ticker.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.vticker-min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.sticky.js' %}"></script>
+    <script src="{% static 'js/vendor/perfect-scrollbar.js' %}"></script>
+    <script src="{% static 'js/vendor/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.theia.sticky.js' %}"></script>
+    <!-- NewsBoard JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
