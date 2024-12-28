@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Halaman Belum Tersedia - Kupas News {% endblock %}
+
+{% block content %}
+    <div class="entry-wraper">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 d-lg-block d-none text-center"><img class="d-inline" src="{% static 'imgs/theme/404.png' %}" alt=""></div>
+            <div class="col-lg-6 col-md-12 text-center">
+                <h1 class="mb-20 display-1">404</h1>
+                <h4 class="mb-30">We’re sorry, we seem to have lost this page, but we don’t want to lose you.</h4>
+                <p>Visit the <a href="index.html"><u>Homepage</u></a> or <a href="contact.html"><u>Report the broken link here</u></a></p>
+                <form action="#" method="get" class="search-form d-lg-flex open-search mb-30">
+                    <i class="icon-search"></i>
+                    <input class="form-control" name="name" id="name" type="text" placeholder="Search...">
+                </form>
+                <div class="form-group">
+                    <a href="contact.html" class="btn btn-facebook btn-outline-secondary">Contact us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
